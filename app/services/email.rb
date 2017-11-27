@@ -4,7 +4,7 @@ class Email
 
 
     def send_email(dados_email)
-     gmail = Gmail.connect("lucasalemao.ns@gmail.com", "lucas_LOST6951_nuttertools_HUNTER")
+     gmail = Gmail.connect("contatominhoco@gmail.com", "Minhoco_123")
      gmail.deliver do
       to dados_email.destinatario
       subject dados_email.subject
