@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'teste/home'
+
   devise_for :users
   get 'dashboard/home'
   root :to => 'dashboard#home'
