@@ -148,7 +148,7 @@ class SiteController < ApplicationController
       @texto=params[:texto]
       @email=Email.new
       @dados_email=DadosEmail.new
-      @dados_email.destinatario="lucasalemao.ns@gmail.com"
+      @dados_email.destinatario="col.anglodecampinas@gmail.com"
       @dados_email.subject="pré_matricula"
       @dados_email.body="Contato via formulario "
       @dados_email.body_html= "<h1> nome do contato: #{@nome}</h1><br> email: #{@email_contato}<br> <h1>conteudo da mensagem</h1> <br> #{@texto} "
@@ -161,7 +161,7 @@ class SiteController < ApplicationController
   
   
   end
-   def pre_matricula_post
+  def pre_matricula_post
         @nucleos = Nucleo.all
         @provas = Prova.all
   
