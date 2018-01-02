@@ -11,7 +11,228 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171125180146) do
+ActiveRecord::Schema.define(version: 20171227105819) do
+
+  create_table "acontecimentos", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "texto"
+    t.string   "link"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "arquivos", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "descricao"
+    t.date     "data_criacao"
+    t.date     "data_prioridade"
+    t.integer  "professore_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "arquivo_file_name"
+    t.string   "arquivo_content_type"
+    t.integer  "arquivo_file_size"
+    t.datetime "arquivo_updated_at"
+  end
+
+  create_table "calendarios", force: :cascade do |t|
+    t.string   "titulo"
+    t.string   "ano"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "coladoradores", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "cargo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "egressos", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "faculdade"
+    t.string   "curso"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "equipes", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "texto"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "estruturas", force: :cascade do |t|
+    t.string   "link"
+    t.string   "titulo"
+    t.text     "texto"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string   "capa_file_name"
+    t.string   "capa_content_type"
+    t.integer  "capa_file_size"
+    t.datetime "capa_updated_at"
+  end
+
+  create_table "galeries", force: :cascade do |t|
+    t.string   "titulo"
+    t.date     "data"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "historia", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "texto"
+    t.string   "link"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "titulo"
+    t.date     "data"
+    t.integer  "galery_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "texto"
+    t.string   "link"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "capa_file_name"
+    t.string   "capa_content_type"
+    t.integer  "capa_file_size"
+    t.datetime "capa_updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.text     "abstract"
+  end
+
+  create_table "noticia", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "texto"
+    t.string   "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "nucleos", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "data_postagens"
+    t.string   "galery_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
+  end
+
+  create_table "professores", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "disciplina"
+    t.text     "descricao"
+    t.integer  "nucleo_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "projetos", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "texto"
+    t.string   "link"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string   "capa_file_name"
+    t.string   "capa_content_type"
+    t.integer  "capa_file_size"
+    t.datetime "capa_updated_at"
+  end
+
+  create_table "provas", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "texto"
+    t.string   "link"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string   "pdf_file_name"
+    t.string   "pdf_content_type"
+    t.integer  "pdf_file_size"
+    t.datetime "pdf_updated_at"
+  end
+
+  create_table "sliders", force: :cascade do |t|
+    t.string   "titulo"
+    t.text     "texto"
+    t.text     "descricao"
+    t.string   "link"
+    t.text     "frase"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

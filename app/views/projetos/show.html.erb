@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"> <%= @projeto.titulo %></h3>
+  </div>
+  <div class="panel-body">
+    
+<p>
+  <strong>Titulo:</strong>
+  <%= @projeto.titulo %>
+</p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @projeto.texto %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @projeto.link %>
+</p>
+<hr>
+<%= image_tag @projeto.photo.url %>
+<hr>
+<%= image_tag @projeto.capa.url %>
+<hr>
+<%= link_to 'Editar', edit_projeto_path(@projeto),class:"btn btn-warning" %> |
+<%= link_to 'Voltar', projetos_path, class:"btn btn-default"%>
+  </div>
+</div>

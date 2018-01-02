@@ -1,0 +1,33 @@
+<div class="row" style="margin: 0px;">
+            <div class="col-sm-12 teambadge text-center">
+               <div class="badgearea text-center" id="egressos_labal">
+                  <p class="badgeparagraph">Egressos</p>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row big-description">
+                 <% @egressos.each do |egresso| %>
+    
+               <div class="col-sm-6 text-left hidden-xs" style="margin-bottom:30px;">
+                  <h2 style="display:inline-block; font-size: 2vw;">
+                     <nobr> <%= egresso.nome %></nobr>
+                  </h2>
+                  <br> 
+                  <nobr>  <%= egresso.curso %> -   <%= egresso.faculdade %></nobr>
+                  </h2>
+               </div>
+              
+
+                <% end %>
+              
+            </div>
+         </div>
+         
+         
+       
+      
+      
+      
+      
+  

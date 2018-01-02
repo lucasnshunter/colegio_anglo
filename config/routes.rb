@@ -1,9 +1,82 @@
 Rails.application.routes.draw do
+  resources :arquivos
+  resources :professores
+  resources :nucleos
+  resources :provas
+  resources :photos
+  resources :galeries
+  get 'site/index'
+
+  get 'site/equipe'
+
+  get 'site/historia'
+
+  get 'site/estrutura'
+
+  get 'site/infantil'
+
+  get 'site/fundamental_I'
+
+  get 'site/fundamental_II'
+
+  get 'site/medio'
+
+  get 'site/projetos'
+
+  get 'site/egressos'
+
+  get 'site/calendario'
+
+  get 'site/provas'
+  post 'site/provas'
+
+  get 'site/humanas'
+
+  get 'site/linguas'
+
+  get 'site/matematica'
+
+  get 'site/biologicas'
+
+  get 'site/natureza'
+
+  get 'site/redacao'
+
+  get 'site/noticias'
+  
+  get 'site/noticia_show'
+  
+  post 'site/noticia_show'
+
+  get 'site/galeria'
+  get 'site/galeria_show'
+  post 'site/galeria_show'
+
+  get 'site/contato'
+  post 'site/professores'
+  get 'site/professores'
+  post 'site/arquivos'
+  get 'site/arquivos'
+  post 'site/testes'
+  get 'site/testes'
+
+  get 'site/pre_matricula'
+  post 'site/projetos_show'
+  get 'site/projetos_show'
+  resources :acontecimentos
+  resources :news
+  resources :egressos
+  resources :projetos
+  resources :estruturas
+  resources :calendarios
+  resources :equipes
+  resources :coladoradores
+  resources :sliders
   get 'teste/home'
 
   devise_for :users
   get 'dashboard/home'
-  root :to => 'dashboard#home'
+  root :to => 'site#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

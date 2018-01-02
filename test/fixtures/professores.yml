@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  disciplina: MyString
+  descricao: MyText
+  nucleo_id: 1
+
+two:
+  nome: MyString
+  disciplina: MyString
+  descricao: MyText
+  nucleo_id: 1

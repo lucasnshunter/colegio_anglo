@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @coladoradore.nome %></h3>
+  </div>
+  <div class="panel-body">
+    
+<p>
+  <strong>Nome:</strong>
+  <%= @coladoradore.nome %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @coladoradore.cargo %>
+</p>
+
+<%= link_to 'Editar', edit_coladoradore_path(@coladoradore) ,class:"btn btn-warning"%> |
+<%= link_to 'Voltar', coladoradores_path ,class:"btn btn-default"%>
+  </div>
+</div>

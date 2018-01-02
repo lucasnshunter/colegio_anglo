@@ -1,0 +1,40 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Cadastrar foto</h3>
+  </div>
+  <div class="panel-body">
+    <%= form_for @photo, :html => { multipart: true } do |f| %>
+  <% if @photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+      <ul>
+      <% @photo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :data_postagens %><br>
+    <%= f.text_field :data_postagens %>
+  </div>
+  <%= f.hidden_field :galery_id %>
+   <div class="field">
+    <%= f.label :foto %><br>
+   <%= f.file_field :foto %>
+  </div>
+ 
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+  </div>
+</div>

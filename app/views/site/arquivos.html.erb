@@ -1,0 +1,29 @@
+
+
+  <div class="row" style="margin: 0px;">
+            <div class="col-sm-12 teambadge text-center">
+               <div class="badgearea text-center" id="professores_labal">
+                  <p class="badgeparagraph">Ensino Fundamental II</p>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12 teachtext2"><%=@professore.nome%><span>&nbsp;-&nbsp;<%=@professore.disciplina%></span></div>
+            </div>
+            <div class="row filelist">
+                  <% @arquivos.each do |arquivo| %>
+  
+  
+               <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                
+                     <div class="file">
+                        <div class="ficon"> <%= link_to (image_tag "img/pdf.png",class:"img-responsive"), asset_path(arquivo.arquivo.url) %> </div>
+                        <div class="fname">  <h4><%=  arquivo.titulo %></h4></div>
+                     </div>
+                
+               </div>
+               <%end%>
+            </div>
+         </div>
+      </div>

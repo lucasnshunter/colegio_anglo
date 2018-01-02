@@ -1,0 +1,27 @@
+ <div class="row" style="margin: 0px;">
+            <div class="col-sm-12 teambadge text-center">
+               <div class="badgearea text-center" id="equipe_labal">
+                  <p class="badgeparagraph">Equipe</p>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid main-canvas">
+            <div class="jumbo"><%=image_tag(@teams.photo.url)%></div>
+         </div>
+         <div class="row big-description" style="margin-top:30px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                 <%=  @teams.texto.html_safe%>
+            </div>
+         </div>
+         
+         
+         <div class="row big-description">
+        <% @colaboradors.each do |colaborador| %>
+    
+    
+            <div class="col-sm-1"></div>
+            <div class="col-sm-5" style="margin-bottom:30px;"> <span class="miniposition"><%= colaborador.nome %></span> <span class="mininame"><%= colaborador.cargo %></span></div>
+          <% end %>
+         </div>
+</div>

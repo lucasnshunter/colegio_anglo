@@ -1,0 +1,49 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Criar novo arquivo</h3>
+  </div>
+  <div class="panel-body">
+ <%= form_for @arquivo, :html => { multipart: true } do |f| %>
+  <% if @arquivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@arquivo.errors.count, "error") %> prohibited this arquivo from being saved:</h2>
+
+      <ul>
+      <% @arquivo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br>
+    <%= f.text_area :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :data_criacao %><br>
+    <%= f.date_select :data_criacao %>
+  </div>
+  <div class="field">
+    <%= f.label :data_prioridade %><br>
+    <%= f.date_select :data_prioridade %>
+  </div>
+  
+   <div class="field">
+    <%= f.label :arquivo %><br>
+     <%= f.file_field :arquivo %>
+  </div>  
+ 
+  <%= f.hidden_field :professore_id %>
+  <div class="actions">
+    <%= f.submit %>
+    
+<% end %>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @news.titulo %></h3>
+  </div>
+  <div class="panel-body">
+    
+<p>
+  <strong>Titulo:</strong>
+  <%= @news.titulo %>
+</p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @news.texto %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @news.link %>
+</p>
+<p>
+  <strong>abstract:</strong>
+  <%= @news.abstract %>
+</p>
+<hr>
+<%= image_tag @news.photo.url %>
+<hr>
+<%= image_tag @news.capa.url %>
+<hr>
+<%= link_to 'Editar', edit_news_path(@news),class:"btn btn-warning" %> |
+<%= link_to 'Voltar', news_index_path,class:"btn btn-default" %>
+  </div>
+</div>

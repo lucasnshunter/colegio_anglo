@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @professore.nome %>
+</p>
+
+<p>
+  <strong>Disciplina:</strong>
+  <%= @professore.disciplina %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @professore.descricao %>
+</p>
+
+<p>
+  <strong>Nucleo:</strong>
+  <%= @professore.nucleo_id %>
+</p>
+
+<%= image_tag @professore.photo.url %>
+<% @arquivos.each do |arquivo| %>
+      <tr>
+        <td><%= arquivo.titulo %></td>
+        <td><%= arquivo.descricao %></td>
+        <td><%= arquivo.data_criacao %></td>
+        <td><%= arquivo.data_prioridade %></td>
+        <td><%= arquivo.professore_id %></td>
+        <td><%= link_to 'Show', arquivo %></td>
+        <td><%= link_to 'Edit', edit_arquivo_path(arquivo) %></td>
+        <td><%= link_to 'Destroy', arquivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    
+    <%= render 'arquivos/form' %>
+<%= link_to 'Editar', edit_professore_path(@professore),class:"btn btn-warning" %> |
+<%= link_to 'Voltar', professores_path,class:"btn btn-default" %>

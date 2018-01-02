@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"> <%= @acontecimento.titulo %></h3>
+  </div>
+  <div class="panel-body">
+   <p>
+  <strong>Titulo:</strong>
+  <%= @acontecimento.titulo %>
+</p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @acontecimento.texto %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @acontecimento.link %>
+</p>
+<hr>
+<%= image_tag @acontecimento.photo.url %>
+<hr>
+<%= link_to 'Editar', edit_acontecimento_path(@acontecimento),class:"btn btn-warning" %> |
+<%= link_to 'Voltar', acontecimentos_path, class:"btn btn-default"%>
+  </div>
+</div>

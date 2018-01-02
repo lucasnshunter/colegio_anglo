@@ -1,0 +1,33 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Cadastrar nucleo de ensino</h3>
+  </div>
+  <div class="panel-body">
+    <%= form_for(@nucleo) do |f| %>
+  <% if @nucleo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nucleo.errors.count, "error") %> prohibited this nucleo from being saved:</h2>
+
+      <ul>
+      <% @nucleo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br>
+    <%= f.text_area :descricao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+  </div>
+</div>

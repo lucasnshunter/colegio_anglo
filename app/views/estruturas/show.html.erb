@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @estrutura.titulo %></h3>
+  </div>
+  <div class="panel-body">
+    
+<p>
+  <strong>Link:</strong>
+  <%= @estrutura.link %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @estrutura.titulo %>
+</p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @estrutura.texto %>
+</p>
+<hr>
+<%= image_tag @estrutura.photo.url %>
+<hr>
+<%= link_to 'Editar', edit_estrutura_path(@estrutura),class:"btn btn-warning" %> |
+<%= link_to 'Voltar', estruturas_path,class:"btn btn-default" %>
+  </div>
+</div>

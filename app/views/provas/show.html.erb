@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Disciplina ENEM</h3>
+  </div>
+  <div class="panel-body">
+   
+<p>
+  <strong>Titulo:</strong>
+  <%= @prova.titulo %>
+</p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @prova.texto %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @prova.link %>
+</p>
+<hr>
+<%= image_tag @prova.photo.url %>
+<hr>
+
+<%= link_to "Baixar pdf", asset_path(@prova.pdf.url),class:"btn btn-success" %>
+  </div>
+</div>
+
+<%= link_to 'Editar', edit_prova_path(@prova),class:"btn btn-warning" %> |
+<%= link_to 'Voltar', provas_path ,class:"btn btn-default"%>

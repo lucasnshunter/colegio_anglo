@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<%= link_to 'Novo Calendario', new_calendario_path,class:"btn btn-primary" %>
+<hr>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Lista de calendarios</h3>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Ano</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calendarios.each do |calendario| %>
+      <tr>
+        <td><%= calendario.titulo %></td>
+        <td><%= calendario.ano %></td>
+        <td><%= link_to 'Mostrar', calendario ,class:"btn btn-primary"%></td>
+        <td><%= link_to 'Editar', edit_calendario_path(calendario) ,class:"btn btn-warning"%></td>
+        <td><%= link_to 'Apagar', calendario, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+  </div>
+</div>

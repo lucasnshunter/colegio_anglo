@@ -1,0 +1,27 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Fotografia da galeria</h3>
+  </div>
+  <div class="panel-body">
+  <p>
+  <strong>Nome:</strong>
+  <%= @photo.nome %>
+</p>
+
+<p>
+  <strong>Data postagens:</strong>
+  <%= @photo.data_postagens %>
+</p>
+
+<p>
+  <strong>Galery:</strong>
+  <%= @photo.galery_id %>
+</p>
+<%= image_tag @photo.foto.url %>
+  </div>
+</div>
+
+
+<%= link_to 'Editar', edit_photo_path(@photo),class:"btn btn-warning" %> |
+<%= link_to 'voltar', galeries_path,class:"btn btn-default" %>

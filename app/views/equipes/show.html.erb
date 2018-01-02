@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @equipe.titulo %></h3>
+  </div>
+  <div class="panel-body">
+    <p>
+  <strong>Titulo:</strong>
+  <%= @equipe.titulo %>
+</p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @equipe.texto %>
+</p>
+<%= image_tag @equipe.photo.url %>
+
+<%= link_to 'Editar', edit_equipe_path(@equipe),class:"btn btn-warning" %> |
+<%= link_to 'Voltar', equipes_path,class:"btn btn-default" %>
+  </div>
+</div>

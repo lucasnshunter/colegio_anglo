@@ -1,0 +1,30 @@
+ <div class="row" style="margin: 0px;">
+            <div class="col-sm-12 teambadge text-center">
+               <div class="badgearea text-center" style="background: url('https://anglo1.000webhostapp.com/public_html/../_public/_front/main/img/badge_bg.png ')">
+                  <p class="badgeparagraph">História</p>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <center>
+              <%=image_tag @historico.photo.url%>
+         </center>
+         <hr>
+         <div class="row big-description" style="margin-top:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10"><%= @historico.texto.html_safe %> </div>
+         </div>
+         <div class="row big-description" style="margin-top:30px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">Lorem ipsum below:</div>
+         </div>
+         <div class="container" style="padding:30px;margin-bottom:60px;" >
+            <div class="row">
+               <div class="col-sm-6"> <textarea cols="2" rows="10" class="storytxt" placeholder="sua msg"></textarea><br> </div>
+               <div class="col-sm-6">
+                  Enviar imagem:<input type="file" name="" value="" class="storytxt" placeholder="imagem"><br> Enviar vídeo:<input type="file" name="" value="" class="storytxt" placeholder="video"><br><br> 
+                  <div class="text-center"> <button type="button" class="btn btn-default btn-lg">Enviar</button> </div>
+               </div>
+            </div>
+         </div>
+         

@@ -1,0 +1,33 @@
+
+ 
+    
+    <div class="row" style="margin: 0px;">
+            <div class="col-sm-12 teambadge text-center">
+               <div class="badgearea text-center" id="professores_labal">
+                  <p class="badgeparagraph"><%=@nucleo.titulo%></p>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row teachlist">
+    <% @professores.each do |professor| %>
+   
+                  
+              
+               <div class="col-xs-2 hidden-sm hidden-md hidden-lg" style="min-height:320px;"></div>
+               <div class="col-xs-2 hidden-sm hidden-md hidden-lg" style="min-height:320px;"></div>
+               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-8" style="min-height:320px;" >
+                  
+                 
+                     <div class="teachpic" ><%= image_tag professor.photo.url,style:"border-radius:50%;",class:"img-responsive" %></div>
+                     <div class="teachhover" id="professor_labal"></div>
+                     <div class="teachkeepr"></div>
+                     <div class="teachtext"><h3>  <%= link_to professor.nome, site_arquivos_path(:professor_id =>professor.id), :method => :post %></h3><span> <h3><%=professor.disciplina%></h3></span> </div>
+                 
+               </div>
+              
+              <%end%>
+               <div class="col-xs-2 hidden-sm hidden-md hidden-lg" style="min-height:320px;"></div>
+            </div>
+         </div>
+        

@@ -1,0 +1,22 @@
+
+ <div class="container">
+            <div class="row headings">
+                <% @news.each do |news| %>
+               
+               <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 headlist text-center">
+                  <div class="headliner" style="margin-left: 0px !important;margin-right: 0px !important;">
+                       
+                           <div class="picture">   <%= link_to (image_tag news.capa.url,style:"width=100%",class:"img-responsive"), site_noticia_show_path(:noticia_id =>news.id), :method => :post %></div>
+                          
+                           <h3 style="text-transform:uppercase;"><%= news.titulo.html_safe %></h3>
+                           <p><%= news.texto.html_safe %></p>
+                       
+                  </div>
+               </div>
+              
+               <%end%>
+             </div>
+</div>
+ <center>  <%= will_paginate @news %></center>
+               
+    

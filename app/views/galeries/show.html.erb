@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @galery.titulo %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @galery.data %>
+</p>
+
+<h3>Photos dessa galeria</h3>
+ 
+    <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Fotos desta galeria</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+       <% @photos.each do |photo| %>
+  <div class="col-md-4">
+    <div class="card" >
+    <%= image_tag photo.foto.url , class:"card-img-top img-responsive"%>
+ 
+  <div class="card-block">
+    <h4 class="card-title"><%= photo.nome %></h4>
+        <td><%= link_to 'Mostrar', photo ,class:"btn btn-success"%></td>
+        <td><%= link_to 'Editar', edit_photo_path(photo),class:"btn btn-warning" %></td>
+        <td><%= link_to 'Apagar', photo, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
+  </div>
+</div>
+  </div>
+  <% end %>
+</div>
+ 
+  
+     
+        
+      
+   
+  </div>
+</div>
+<%= render 'photos/form' %>
+
+
+
+
+
+
+
+<%= link_to 'Editar', edit_galery_path(@galery),class:"btn btn-warning" %> |
+<%= link_to 'Voltar', galeries_path ,class:"btn btn-default"%>

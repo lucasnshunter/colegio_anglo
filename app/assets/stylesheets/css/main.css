@@ -1,0 +1,540 @@
+* {
+    /* border: 1px solid black; */
+}
+
+body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover !important;
+}
+
+.topbar {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: cover !important;
+    min-height: 140px;
+}
+
+.bottombar {
+    color: #fff;
+    font-weight: 800;
+    font-size: 14px;
+    text-align: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: cover !important;
+    min-height: 80px;
+    padding-top: 15px;
+}
+
+.topbar-md-sm {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: cover !important;
+    min-height: 100px;
+}
+
+.topbar-xs {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: cover !important;
+    min-height: 80px;
+}
+
+.topbar-xs>.menutoggle {
+    float: right;
+    margin: 10px 10px 10px 10px;
+    margin-bottom: opx;
+}
+
+.menutoggle a {
+    color: #000;
+    text-decoration: none;
+}
+
+.m10 {
+    margin: 10px;
+}
+
+.bg-black {
+    background-color: #000;
+    color: #fff;
+}
+
+.bg-white {
+    background-color: #fff;
+    color: #000;
+}
+
+.menubar {
+    text-align: right;
+    z-index: 9999;
+}
+
+.menubar>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 20%;
+}
+
+.menubar>ul li {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 35px;
+}
+
+.menubar>ul li ul {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+    border-width: 5px;
+    border-color: #ff912f;
+    border-style: solid;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0px !important;
+    margin-left: 0px !important;
+    padding: 0px;
+    max-width: 18%;
+}
+
+.menubar>ul li ul li ul {
+    position: absolute;
+    float: right;
+    background-color: #fff;
+    border-radius: 8px;
+    border-width: 5px;
+    border-color: #ff912f;
+    border-style: solid;
+    display: block;
+    margin-top: -35px;
+    margin-bottom: 15px;
+    margin-left: 65% !important;
+    padding: 0px;
+    max-width: 220%;
+    min-width: 120%;
+}
+
+.menu {}
+
+.menubar>ul li ul li ul li {
+    text-align: center;
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.menubar>ul li ul li {
+    text-align: center;
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.menubar>ul li ul li>a {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-family: "PT-sans";
+    font-weight: 700;
+    font-size: 18px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.menubar>ul li ul li>a::after {}
+
+.menubar>ul li ul li>a:hover {
+    color: #000;
+    border-radius: 8px;
+    background-color: #ff912f;
+    font-family: "PT-sans";
+    font-weight: 700;
+}
+
+.menubar>ul li>a {
+    color: #333;
+    text-decoration: none;
+    font-family: "PT-sans";
+    font-weight: 700;
+    font-size: 18px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menubar>ul li>a:hover {
+    color: #000;
+    border-radius: 8px;
+    background-color: #ff912f;
+    font-family: "PT-sans";
+    font-weight: 700;
+}
+
+.menubar>ul li:not(:first-child):before {
+    content: "|\00a0\00a0"
+}
+
+.menubar>ul li ul li::before {
+    content: "" !important;
+}
+
+.menubar-xs {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    display: none;
+}
+
+.menubar-xs>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.menubar-xs>ul li {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.menubar-xs>ul li>a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-family: "PT-sans";
+    font-weight: 700;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menubar-xs>ul li>a:hover {
+    color: #000;
+    border-radius: 8px;
+    background-color: #ff912f;
+    font-family: "PT-sans";
+    font-weight: 700;
+}
+
+.headings {
+    margin-top: 20px;
+}
+
+.headings h3 {
+    font-weight: 600;
+    font-size: 17px !important;
+}
+
+.headings p {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.headliner {
+    border: 7px dashed #ff912f;
+    margin: 15px;
+    padding: 10px;
+    min-height: 400px;
+}
+
+.headliner-dark {
+    border: 7px dashed #444;
+    margin: 15px;
+    padding: 10px;
+    min-height: 400px;
+}
+
+.headliner>.picture {
+    background-color: none;
+    display: block;
+    min-height: 170px;
+}
+
+.headliner-dark>.picture {
+    background-color: #333;
+    display: block;
+    min-height: 170px;
+}
+
+.teambadge {
+    text-align: center;
+    min-height: 100px;
+    padding-top: 2%;
+}
+
+.quicklinx {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.quicklinx img {
+    margin-bottom: 5px;
+}
+
+.main-canvas {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-canvas-end {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    margin: 0px
+}
+
+.jumbo {
+    text-align: center;
+}
+
+.big-description {
+    color: #555;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.mininame {
+    display: block;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.miniposition {
+    display: block;
+    color: #000;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: justify;
+}
+
+.badgearea {
+    background-repeat: no-repeat !important;
+    background-position-x: center !important;
+    background-position-y: center !important;
+    min-width: 301px;
+    min-height: 84px;
+    margin-bottom: 30px;
+}
+
+.badgeparagraph {
+    color: #555;
+    font-size: 15px;
+    font-weight: 800;
+    padding-top: 15px;
+    margin-bottom: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-transform: uppercase;
+}
+
+.storytxt {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.projitem {
+    padding: 15px;
+    background-color: #333;
+    min-height: 380px;
+}
+
+.projitem:hover {
+    background-color: #ffc00f;
+    color: #333 !important;
+}
+
+.projitem a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.projitem-pic {
+    min-height: 310px;
+    background-position-x: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.projitem-capt {
+    padding-top: 15px;
+    color: #fafafa;
+    text-align: center;
+    vertical-align: middle;
+    min-height: 70px;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.strucpic {
+    padding: 40px;
+    padding-right: 54px;
+    background-clip: content-box !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: absolute;
+    min-width: 385px;
+    min-height: 450px;
+}
+
+.struchover {
+    background-position: left center !important;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    min-width: 385px;
+    min-height: 450px;
+}
+
+.strukeepr {
+    position: relative;
+    min-width: 385px;
+    min-height: 450px;
+}
+
+.stuctext {
+    position: absolute;
+    bottom: 55px;
+    text-align: center;
+    width: 385px;
+    ;
+}
+
+.struclist a {
+    color: #ffc00f;
+    text-decoration: none;
+    font-family: "PT-sans";
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.teachlist a {
+    color: #333;
+    text-decoration: none;
+    font-family: "PT-sans";
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.teachpic {
+    padding-top: 15px;
+    padding-left: 3px;
+    position: absolute;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+}
+
+.teachhover {
+    background-position: left center !important;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    min-width: 240px;
+    min-height: 240px;
+}
+
+.teachkeepr {
+    position: relative;
+    min-width: 240px;
+    min-height: 240px;
+}
+
+.teachtext {
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    width: 200px;
+}
+
+.teachtext span {
+    display: block;
+    font-weight: 500;
+    text-align: center;
+}
+
+.teachtext2 {
+    color: #555;
+    text-decoration: none;
+    font-family: "PT-sans";
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    position: relative;
+    text-align: left;
+}
+
+.teachtext2 span {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+}
+
+.filelist a {
+    color: #555;
+    text-decoration: none;
+    font-family: "PT-sans";
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.file {
+    margin-top: 25px;
+}
+
+.headlist {
+    display: block;
+    color: #000;
+    font-size: 16px;
+    font-weight: 800;
+    
+}
+
+.headlist a {
+    text-decoration: none;
+    display: block;
+    color: #000;
+    font-size: 16px;
+    font-weight: 800;
+}
+/* codigo do lucas*/

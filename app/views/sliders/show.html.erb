@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @slider.titulo %></h3>
+  </div>
+  <div class="panel-body">
+    <p>
+  <strong>Titulo:</strong>
+  <%= @slider.titulo %>
+</p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @slider.texto %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @slider.descricao %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @slider.link %>
+</p>
+
+<p>
+  <strong>Frase:</strong>
+  <%= @slider.frase %>
+</p>
+<hr>
+<%= image_tag @slider.photo.url %>
+<hr>
+<%= link_to 'Editar', edit_slider_path(@slider),class:"btn btn-warning" %> |
+<%= link_to 'Voltar', sliders_path,class:"btn btn-default" %>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">  <%= @calendario.titulo %></h3>
+  </div>
+  <div class="panel-body">
+   
+<p>
+  <strong>Titulo:</strong>
+  <%= @calendario.titulo %>
+</p>
+
+<p>
+  <strong>Ano:</strong>
+  <%= @calendario.ano %>
+</p>
+<%= image_tag @calendario.photo.url %>
+
+<%= link_to 'Editar', edit_calendario_path(@calendario),class:"btn btn-warning" %> |
+<%= link_to 'Voltar', calendarios_path,class:"btn btn-default" %>
+  </div>
+</div>

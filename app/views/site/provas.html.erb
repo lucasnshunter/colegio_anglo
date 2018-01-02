@@ -1,0 +1,16 @@
+
+<div class="row" style="margin: 0px;">
+            <div class="col-sm-12 teambadge text-center">
+               <div class="badgearea text-center" id="prova_labal">
+                  <p class="badgeparagraph"><%=@prova.titulo%></p>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid main-canvas">
+            <div class="jumbo"><center><%=image_tag @prova.photo.url,style:"max-width:80%;",class:"img-responsive"%></center></div>
+         </div>
+         <div class="row big-description" style="margin-top:50px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10"><center><%=@prova.texto%></center></div>
+         </div>
+           <center><%= link_to "Baixar prova", asset_path(@prova.pdf.url),class:"btn btn-warning" %></center>

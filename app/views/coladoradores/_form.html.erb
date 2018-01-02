@@ -1,0 +1,33 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Cadsatrar colaborador</h3>
+  </div>
+  <div class="panel-body">
+    <%= form_for(@coladoradore) do |f| %>
+  <% if @coladoradore.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coladoradore.errors.count, "error") %> prohibited this coladoradore from being saved:</h2>
+
+      <ul>
+      <% @coladoradore.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :cargo %><br>
+    <%= f.text_field :cargo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+  </div>
+</div>

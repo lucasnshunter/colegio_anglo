@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Área ENEM</h3>
+  </div>
+  <div class="panel-body">
+   <%= form_for @prova, :html => { multipart: true } do |f| %>
+
+  <% if @prova.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prova.errors.count, "error") %> prohibited this prova from being saved:</h2>
+
+      <ul>
+      <% @prova.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :texto %><br>
+    <%= f.text_area :texto %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.file_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :pdf %><br>
+  <%= f.file_field :pdf %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+  </div>
+</div>

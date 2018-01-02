@@ -1,0 +1,38 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Criar galeria</h3>
+  </div>
+  <div class="panel-body">
+   <%= form_for @galery, :html => { multipart: true } do |f| %>
+  <% if @galery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@galery.errors.count, "error") %> prohibited this galery from being saved:</h2>
+
+      <ul>
+      <% @galery.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :data %><br>
+    <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br>
+   <%= f.file_field :photo %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+  </div>
+</div>

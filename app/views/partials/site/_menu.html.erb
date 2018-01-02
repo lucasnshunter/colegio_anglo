@@ -1,0 +1,156 @@
+<div class="menubar hidden-xs">
+               <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li>
+                     <a href="#" id="colegiomenu" >O Colégio</a> 
+                     <ul id="menucolegio" class="menu second-level" style="display: none; z-index: 9999;">
+                        <li><%= link_to "Equipe", site_equipe_path %></li>
+                        <li><%= link_to "Historia", site_historia_path %></li>
+                        <li><%= link_to "Estrutura", site_estrutura_path %></li>
+                        <li>
+                           <a href="#" id="professoresmenu">Professores</a> 
+                           <ul id="menuprofessores" class="menu third-level" style="display: none; z-index: 9999;">
+                               <% @nucleos.each do |nucleo| %>
+                                    <li>
+                                        <%= link_to nucleo.titulo, site_professores_path(:nucleo_id => nucleo.id), :method => :post %>
+                                     
+                                    </li>
+                                  
+                                    
+                                    
+     
+                                         
+                                     <% end %>
+                           </ul>
+                        </li>
+                        <li><a class="secleveler" href="https://portaldoprofessor.escolarmanageronline.com.br/Login" target="_new" >Portal do Professor</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#" id="alunosmenu">Estudantes</a> 
+                     <ul id="menualunos" class="menu second-level" style="display: none; z-index: 9999;">
+                        <li>
+                           <a href="#" id="enemmenu">ENEM</a> 
+                           <ul id="menuenem" class="menu third-level" style="display: none; z-index: 9999;">
+                               <% @provas.each do |prova| %>
+    
+
+   
+                              <li>
+                                 <%= link_to prova.titulo, site_provas_path(:prova_id => prova.id), :method => :post %>
+                                   
+                              </li>
+                               <% end %>
+                           </ul>
+                        </li>
+                        <li> <%= link_to "Projetos", site_projetos_path %></li>
+                        <li> <%= link_to "Egressos", site_egressos_path %></li>
+                        <li> <%= link_to "Calendário", site_calendario_path %></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a id="noticiasmenu" href="#">Notícias</a> 
+                     <ul id="menunoticias" class="menu second-level" style="display: none; z-index: 9999;">
+                        <li> <%= link_to "Notícias", site_noticias_path %></li>
+                        <li>
+                           <%= link_to "Galeria de fotos", site_galeria_path %>
+                        </li>
+                     </ul>
+                  </li>
+                  <li> <%= link_to "Pré matricula", site_pre_matricula_path %></li>
+                       <li> <%= link_to "Contato", site_contato_path %></li>
+               </ul>
+            </div>
+            <div id="mainmenu" class="menubar-xs hidden-sm hidden-md hidden-lg">
+               <ul style="margin:0px !important;padding:0px !important; width:100% !important">
+                  <li><a href="index.html">Home</a></li>
+                  <li>
+                     <a href="#" data-toggle="collapse" data-target="#colegioaccord">O Colégio</a> 
+                     <div id="colegioaccord" class="collapse">
+                        <br><br> 
+                        <ul style="margin:0px !important;padding:0px !important; width:100% !important">
+                           <li> <%= link_to "Equipe", site_equipe_path %></li>
+                           <li> <%= link_to "História", site_historia_path %></li>
+                           <li> <%= link_to "Estrutura",site_estrutura_path %></li>
+                           <li>
+                              <a href="#" data-toggle="collapse" data-target="#profaccord" >Professores</a> 
+                              <div id="profaccord" class="collapse">
+                                 <br><br> 
+                                 <ul style="margin:0px !important;padding:0px !important; width:100% !important" >
+                                     <% @nucleos.each do |nucleo| %>
+                                    <li>
+                                        <%= link_to nucleo.titulo, site_professores_path(:nucleo_id => nucleo.id), :method => :post %>
+                                     
+                                    </li>
+                                  
+                                    
+                                    
+     
+                                         
+                                     <% end %>
+                                 </ul>
+                                 <br><br> 
+                              </div>
+                           </li>
+                           <li><a href="https://portaldoprofessor.escolarmanageronline.com.br/Login" target="_new" >Portal do Professor</a></li>
+                        </ul>
+                        <br><br> 
+                     </div>
+                  </li>
+                  <li>
+                     <a href="#" data-toggle="collapse" data-target="#alunosaccord">Estudantes</a> 
+                     <div id="alunosaccord" class="collapse">
+                        <br><br> 
+                        <ul style="margin:0px !important;padding:0px !important; width:100% !important">
+                           <li>
+                              <a data-toggle="collapse" data-target="#enemaccord" href="#" >ENEM</a> 
+                              <div id="enemaccord" class="collapse">
+                                 <br><br> 
+                                 <ul style="margin:0px !important;padding:0px !important; width:100% !important">
+                                    <li>
+                                      <%= link_to "Provas", site_index_path %>
+                                    </li>
+                                    <li>
+                                        <%= link_to "Linguagens", site_index_path %>
+                                    </li>
+                                    <li>
+                                        <%= link_to "Ciências Humanas", site_index_path %>
+                                    </li>
+                                    <li>
+                                        <%= link_to "Matématica", site_index_path %>
+                                    </li>
+                                    <li>
+                                      <%= link_to "Ciências da natureza", site_index_path %>
+                                    </li>
+                                    <li>
+                                        <%= link_to "Redação", site_index_path %>
+                                    </li>
+                                 </ul>
+                                 <br><br> 
+                              </div>
+                           </li>
+                           <li> <%= link_to "Projetos", site_projetos_path %></li>
+                           <li> <%= link_to "Egressos", site_egressos_path %><li>
+                           <li> <%= link_to "Calendario", site_calendario_path %></li>
+                        </ul>
+                        <br><br> 
+                     </div>
+                  </li>
+                  <li>
+                     <a href="#" data-toggle="collapse" data-target="#noticiasaccord">Notícias</a> 
+                     <div id="noticiasaccord" class="collapse">
+                        <br><br> 
+                        <ul style="margin:0px !important;padding:0px !important; width:100% !important">
+                           <li> <%= link_to "Notícias", site_noticias_path %></li>
+                           <li>
+                               <%= link_to "Galeria de Fotos", site_galeria_path %>
+                           </li>
+                        </ul>
+                        <br><br> 
+                     </div>
+                  </li>
+                  <li> <%= link_to "Contato", site_contato_path %></li>
+                    <li> <%= link_to "Pré matricula", site_pre_matricula_path %></li>
+               </ul>
+            </div>
+         </div>

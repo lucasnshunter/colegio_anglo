@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Equipe</h3></h3>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Texto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @equipes.each do |equipe| %>
+      <tr>
+        <td><%= equipe.titulo %></td>
+        <td><%= equipe.texto %></td>
+        <td><%= link_to 'Mostrar', equipe ,class:"btn btn-primary"%></td>
+        <td><%= link_to 'Editar', edit_equipe_path(equipe) ,class:"btn btn-warning"%></td>
+        <td><%= link_to 'Apagar', equipe, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  </div>
+</div>

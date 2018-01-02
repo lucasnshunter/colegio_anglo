@@ -1,0 +1,23 @@
+
+<div class="row" style="margin: 0px;">
+            <div class="col-sm-12 teambadge text-center">
+               <div class="badgearea text-center" id="projetos_labal">
+                  <p class="badgeparagraph">Projetos</p>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid main-canvas">
+            <div class="row big-description" style="margin-top: 0px;">
+               <div class="col-sm-1"></div>
+               <div class="col-sm-10 text-center">
+                  <h2><%=@projeto.titulo%></h2>
+               </div>
+            </div>
+            <div class="jumbo"> <%=image_tag @projeto.photo.url,style:"max-width:80%;"%> </div>
+         </div>
+         <div class="row big-description" style="margin-top:50px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10"><%=@projeto.texto.html_safe%> </div>
+         </div>
+
+        

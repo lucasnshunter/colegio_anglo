@@ -1,0 +1,30 @@
+<div class="row" style="margin: 0px;">
+            <div class="col-sm-12 teambadge text-center">
+               <div class="badgearea text-center" id="projetos_labal">
+                  <p class="badgeparagraph">Projetos</p>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row" style="margin-bottom:40px;">
+                   
+          <% @projetos.each do |projeto| %>
+    
+    
+               <div class="col-lg-3" style="margin-bottom:40px;">
+                  <div class="projitem">
+                         <%= link_to image_tag(projeto.capa.url), site_projetos_show_path(:id_projeto => projeto.id), :method => :post%>
+                       
+                        <div class="projitem-pic" style="background: url('images/enem/1.jpg')"></div>
+                        <div class="projitem-capt"><%=projeto.titulo%></div>
+                     
+                  </div>
+               </div>
+                 
+       
+       
+   
+    <% end %>
+            </div>
+         </div>
+      <center><%= will_paginate @projetos %></center>
