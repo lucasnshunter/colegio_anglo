@@ -11,7 +11,7 @@ body {
 }
 
 .topbar {
-    background-attachment: fixed;
+   
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: top;
@@ -24,7 +24,7 @@ body {
     font-weight: 800;
     font-size: 14px;
     text-align: center;
-    background-attachment: fixed;
+   
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: top;
