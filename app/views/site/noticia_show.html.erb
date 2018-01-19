@@ -14,12 +14,12 @@
          <div class="row big-description" style="margin-top:50px;">
             <div class="col-sm-1"></div>
             <div class="col-sm-10 text-center">
-               <h2><%@noticia.titulo%></h2>
+               <h2><%@noticia.titulo.html_safe%></h2>
             </div>
          </div>
          <div class="row big-description" style="margin-top:50px;">
             <div class="col-sm-1"></div>
-            <div class="col-sm-10"><%=@noticia.texto%></div>
+            <div class="col-sm-10"><%=@noticia.texto.html_safe%></div>
          </div>
          <div class="row big-description">
             <div class="col-sm-1"></div>

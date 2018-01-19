@@ -9,7 +9,7 @@
                            <div class="picture">   <%= link_to (image_tag news.capa.url,style:"width=100%",class:"img-responsive"), site_noticia_show_path(:noticia_id =>news.id), :method => :post %></div>
                           
                            <h3 style="text-transform:uppercase;"><%= news.titulo.html_safe %></h3>
-                           <p><%= news.texto.html_safe %></p>
+                           <p><%= news.abstract.html_safe %></p>
                        
                   </div>
                </div>

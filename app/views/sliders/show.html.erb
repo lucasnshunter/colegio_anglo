@@ -31,7 +31,7 @@
   <%= @slider.frase %>
 </p>
 <hr>
-<%= image_tag @slider.photo.url %>
+<%= image_tag @slider.photo.url,class:"img-responsive" %>
 <hr>
 <%= link_to 'Editar', edit_slider_path(@slider),class:"btn btn-warning" %> |
 <%= link_to 'Voltar', sliders_path,class:"btn btn-default" %>

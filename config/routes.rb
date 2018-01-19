@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ 
   resources :arquivos
   resources :professores
   resources :nucleos

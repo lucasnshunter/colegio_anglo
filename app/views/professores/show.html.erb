@@ -36,4 +36,5 @@
     
     <%= render 'arquivos/form' %>
 <%= link_to 'Editar', edit_professore_path(@professore),class:"btn btn-warning" %> |
-<%= link_to 'Voltar', professores_path,class:"btn btn-default" %>
+<%= link_to "Voltar", nucleo_path(@professore.nucleo_id),class:"btn btn-default" %>
+

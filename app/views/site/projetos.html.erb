@@ -13,7 +13,7 @@
     
                <div class="col-lg-3" style="margin-bottom:40px;">
                   <div class="projitem">
-                         <%= link_to image_tag(projeto.capa.url), site_projetos_show_path(:id_projeto => projeto.id), :method => :post%>
+                         <%= link_to image_tag(projeto.capa.url,style:"width=100%",class:"img-responsive"), site_projetos_show_path(:id_projeto => projeto.id), :method => :post%>
                        
                         <div class="projitem-pic" style="background: url('images/enem/1.jpg')"></div>
                         <div class="projitem-capt"><%=projeto.titulo%></div>

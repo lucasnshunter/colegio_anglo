@@ -60,7 +60,7 @@ class ProfessoresController < ApplicationController
   def destroy
     @professore.destroy
     respond_to do |format|
-      format.html { redirect_to professores_url, notice: 'Professore was successfully destroyed.' }
+      format.html { redirect_to nucleo_path(@professore.nucleo_id), notice: 'Professore was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

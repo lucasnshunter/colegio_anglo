@@ -1,3 +1,5 @@
+
+
 <div class="container-fluid main-canvas">
    <div class="jumbo bg-black">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -8,11 +10,15 @@
                 </a>
              </div>
               <% @sliders.each do |slider| %>
-                <%if slider.id!=@slider.id%>
+               <%if slider.id!=@slider.id%>
+               <div class="item">
+                
                     <a href=<%=slider.link%>>
                    <div class="item "><%=(image_tag slider.photo.url)%> </div>
                    </a>
-                <%end%>  
+             
+                </div>
+                   <%end%>  
             <% end %>
        
          </div>
@@ -20,3 +26,4 @@
       </div>
    </div>
 </div>
+
