@@ -1,16 +1,20 @@
 <div class="container-fluid hidden-md hidden-sm hidden-xs topbar "id="logobar_um" >
-   <a href="site/index.html" style="background-color: transparent !important;">
-   <%=image_tag("img/logo.png",style:"max-height:80px;margin-left:20px;margin-top:40px;")%>
+   <%= link_to root_path,style:"background-color: transparent !important;" do %>
+     <%=image_tag("img/logo.png",style:"max-height:80px;margin-left:20px;margin-top:40px;")%>
+   <% end %>
+   
+   
    </a>
 </div>
 <div class="container-fluid hidden-lg hidden-xs topbar-md-sm  style_image" id="logobar_dois">
-   <a href="index.html">
-   <%=image_tag("img/logo.png",style:"max-height:56px;margin-left:20px;margin-top:35px; ")%>
-   </a>
+    <%= link_to root_path,style:"background-color: transparent !important;" do %>
+     <%=image_tag("img/logo.png",style:"max-height:56px;margin-left:20px;margin-top:35px; ")%>
+   <% end %>
 </div>
 <div class="container-fluid hidden-sm hidden-md hidden-lg topbar-xs  style_image" id="logobar_tres">
-   <a href="index.html"><%=image_tag("img/logo.png",style:"max-height:44px;margin-left:15px;margin-top:30px;")%>
-   </a>
+    <%= link_to root_path,style:"background-color: transparent !important;" do %>
+     <%=image_tag("img/logo.png",style:"max-height:44px;margin-left:15px;margin-top:30px;")%>
+   <% end %>
    <div class="menutoggle"> <a id="menutoggle" href="#" class="thumbnail" style="margin:0px;"> <i class="zmdi zmdi-menu zmdi-hc-2x m10"></i> </a> 
    </div>
 </div>
