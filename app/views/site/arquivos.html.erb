@@ -1,29 +1,581 @@
+<% @arquivos.each do |arquivo| %>
+<%case arquivo.turma%>
+<%when 1%>
+ <%@maternal=true%>
+<%when 2%>
+<%@fase_1=true%>
+<%when 3%>
+<%@fase_2=true%>
+<%when 4%>
+<%@fase_3=true%>
+<%when 5%>
+<%@primeiro=true%>
+<%when 6%>
+<%@segundo=true%>
+<%when 7%>
+<%@terceiro=true%>
+<%when 8%>
+<%@quarto=true%>
+<%when 9%>
+<%@quinto=true%>
+<%when 10%>
+<%@sexto=true%>
+<%when 11%>
+<%@setimo=true%>
+<%when 12%>
+<%@oitavo=true%>
+<%when 13%>
+<%@nono=true%>
+<%when 14%>
+<%@primeiro_medio=true%>
+<%when 15%>
+<%@segundo_medio=true%>
+<%when 16%>
+<%@terceiro_medio=true%>
+<%end%>
+  <%end%>
 
-
-  <div class="row" style="margin: 0px;">
+<div class="row" style="margin: 0px;">
             <div class="col-sm-12 teambadge text-center">
-               <div class="badgearea text-center" id="professores_labal">
-                  <p class="badgeparagraph">Ensino Fundamental II</p>
+               <div class="badgearea text-center"  id="calendario_labal">
+                  <p class="badgeparagraph"><%=@professore.nome%></p>
                </div>
             </div>
          </div>
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-12 teachtext2"><%=@professore.nome%><span>&nbsp;-&nbsp;<%=@professore.disciplina%></span></div>
-            </div>
-            <div class="row filelist">
-                  <% @arquivos.each do |arquivo| %>
-  
-  
-               <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
-                
-                     <div class="file">
-                        <div class="ficon"> <%= link_to (image_tag "img/pdf.png",class:"img-responsive"), asset_path(arquivo.arquivo.url) %> </div>
-                        <div class="fname">  <h4><%=  arquivo.titulo %></h4></div>
-                     </div>
-                
-               </div>
-               <%end%>
-            </div>
-         </div>
-      </div>
+<div class="panel panel-warning">
+   <div class="panel-heading"></div>
+  <div class="panel-body">
+    
+    
+    
+    
+ <div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#professor" aria-controls="home" role="tab" data-toggle="tab">O Professor (a) </a></li>
+     <%if @maternal==true%>
+    <li role="presentation"><a href="#maternal" aria-controls="home" role="tab" data-toggle="tab">Maternal </a></li>
+     <%end%>
+     <%if @fase_1==true%>
+    <li role="presentation"><a href="#fase_1" aria-controls="profile" role="tab" data-toggle="tab">Fase 1</a></li>
+     <%end%>
+     <%if @fase_2==true%>
+    <li role="presentation"><a href="#fase_2" aria-controls="messages" role="tab" data-toggle="tab">Fase 2</a></li>
+     <%end%>
+     <%if @fase_3==true%>
+    <li role="presentation"><a href="#fase_3" aria-controls="settings" role="tab" data-toggle="tab">Fase 3</a></li>
+     <%end%>
+     <%if @primeiro==true%>
+    <li role="presentation"><a href="#primeiro" aria-controls="profile" role="tab" data-toggle="tab">Primeiro ano</a></li>
+     <%end%>
+     <%if @segundo==true%>
+    <li role="presentation"><a href="#segundo" aria-controls="messages" role="tab" data-toggle="tab">segundo ano</a></li>
+     <%end%>
+     <%if @terceiro==true%>
+    <li role="presentation"><a href="#terceiro" aria-controls="settings" role="tab" data-toggle="tab">Terceiro ano</a></li>
+     <%end%>
+     <%if @quarto==true%>
+    <li role="presentation"><a href="#quarto" aria-controls="profile" role="tab" data-toggle="tab">Quarto ano</a></li>
+     <%end%>
+     <%if @quinto==true%>
+    <li role="presentation"><a href="#quinto" aria-controls="messages" role="tab" data-toggle="tab">Quinto ano</a></li>
+     <%end%>
+     <%if @sexto==true%>
+    <li role="presentation"><a href="#sexto" aria-controls="settings" role="tab" data-toggle="tab">Sexto ano</a></li>
+     <%end%>
+     <%if @setimo==true%>
+    <li role="presentation"><a href="#setimo" aria-controls="profile" role="tab" data-toggle="tab">Setimo ano</a></li>
+     <%end%>
+     <%if @oitavo==true%>
+    <li role="presentation"><a href="#oitavo" aria-controls="messages" role="tab" data-toggle="tab">Oitavo ano</a></li>
+     <%end%>
+     <%if @nono==true%>
+    <li role="presentation"><a href="#nono" aria-controls="settings" role="tab" data-toggle="tab">Nono ano</a></li>
+     <%end%>
+     <%if @primeiro_medio==true%>
+    <li role="presentation"><a href="#primeiro_m" aria-controls="profile" role="tab" data-toggle="tab">Primeiro ano</a></li>
+     <%end%>
+     <%if @segundo_medio==true%>
+    <li role="presentation"><a href="#segundo_m" aria-controls="messages" role="tab" data-toggle="tab">Segundo ano</a></li>
+     <%end%>
+     <%if @terceiro_medio==true%>
+    <li role="presentation"><a href="#terceiro_m" aria-controls="messages" role="tab" data-toggle="tab">Terceiro ano</a></li>
+     <%end%>
+
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="professor">
+       <%=@professore.descricao.html_safe%>
+       
+    </div>
+    <%if @maternal==true%>
+    <div role="tabpanel" class="tab-pane" id="maternal">
+    
+          <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+      
+          <% @arquivos.each do |arquivo| %>
+            <% if arquivo.turma==1 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+      
+    </div>
+    <%end%>
+    <%if @fase_1==true%>
+    <div role="tabpanel" class="tab-pane" id="fase_1">
+     
+          <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+            <% if arquivo.turma==2 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+     
+    </div>
+    <%end%>
+    <%if @fase_2==true%>
+    <div role="tabpanel" class="tab-pane" id="fase_2">
+     
+           <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+            <% if arquivo.turma==3 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+      
+    </div>
+    <%end%>
+    <%if @fase_3==true%>
+    <div role="tabpanel" class="tab-pane" id="fase_3">
+      
+           <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+           <% if arquivo.turma==4 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+      
+    </div>
+    <%end%>
+    <%if @primeiro==true%>
+    <div role="tabpanel" class="tab-pane" id="primeiro">
+      
+           <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+            <% if arquivo.turma==5 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+      
+    </div>
+    <%end%>
+    <%if @segundo==true%>
+    <div role="tabpanel" class="tab-pane" id="segundo">
+       
+         <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+            <% if arquivo.turma==6 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+       
+    </div>
+    <%end%>
+    <%if @terceiro==true%>
+    <div role="tabpanel" class="tab-pane" id="terceiro">
+      
+           <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+            <% if arquivo.turma==7 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+      
+    </div>
+    <%end%>
+    <%if @quarto==true%>
+    <div role="tabpanel" class="tab-pane" id="quarto">
+     
+           <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+           <% if arquivo.turma==8 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+     
+    </div>
+    <%end%>
+    <%if @quinto==true%>
+    <div role="tabpanel" class="tab-pane" id="quinto">
+     
+         <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+            <% if arquivo.turma==9 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+      
+    </div>
+    <%end%>
+    <%if @sexto==true%>
+    <div role="tabpanel" class="tab-pane" id="sexto">
+       
+          <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+            <% if arquivo.turma==10 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+      
+    </div>
+    <%end%>
+    <%if @setimo==true%>
+    <div role="tabpanel" class="tab-pane" id="setimo">
+      
+           <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+           <% if arquivo.turma==11%>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+       
+    </div>
+    <%end%>
+    <%if @oitavo==true%>
+    <div role="tabpanel" class="tab-pane" id="oitavo">
+       
+        <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+            <% if arquivo.turma==12 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+      
+    </div>
+    <%end%>
+    <%if @nono==true%>
+    <div role="tabpanel" class="tab-pane" id="nono">
+      
+           <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+            <% if arquivo.turma==13 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+       
+    </div>
+    <%end%>
+    <%if @primeiro_medio==true%>
+    <div role="tabpanel" class="tab-pane" id="primeiro_m">
+       
+          <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+           <% if arquivo.turma==14 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+     
+    </div>
+    <%end%>
+    <%if @segundo_medio==true%>
+    <div role="tabpanel" class="tab-pane" id="segundo_m">
+      
+           <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+           <% if arquivo.turma==15 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+     
+    </div>
+    <%end%>
+   
+    
+    <%if @terceiro_medio==true%>
+    <div role="tabpanel" class="tab-pane" id="terceiro_m">
+      
+           <table class="table">
+           <thead>
+             <tr>
+               <th>Titulo</th>
+               <th>Data de postagem</th>
+                <th>Descriçao</th>
+               <th>Baixar</th>
+             </tr>
+           </thead>
+             <tbody>
+          <% @arquivos.each do |arquivo| %>
+           <% if arquivo.turma==16 %>
+               <tr>
+                 <td><%= arquivo.titulo %></td>
+                 <td><%= arquivo.data_criacao %></td>
+                 <td><%= arquivo.descricao.html_safe %></td>
+                 <td><%= link_to 'Baixar', asset_path(arquivo.arquivo.url),class:"btn btn-warning" %> </td>
+               </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+           </table>
+     
+    </div>
+    <%end%>
+    
+    
+    
+    
+    
+  </div>
+
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+</div>

@@ -71,6 +71,6 @@ class ArquivosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def arquivo_params
-      params.require(:arquivo).permit(:titulo, :descricao, :data_criacao, :data_prioridade, :professore_id,:arquivo)
+      params.require(:arquivo).permit(:titulo, :descricao, :data_criacao, :data_prioridade, :professore_id,:arquivo,:turma)
     end
 end

@@ -141,8 +141,8 @@ class SiteController < ApplicationController
        @cont_photos=0
   end
   def contato
-       @nucleos = Nucleo.all
-       @provas = Prova.all
+      @nucleos = Nucleo.all
+      @provas = Prova.all
       @nome=params[:nome]
       @email_contato=params[:email]
       @texto=params[:texto]
@@ -158,11 +158,12 @@ class SiteController < ApplicationController
   def pre_matricula
        @nucleos = Nucleo.all
        @provas = Prova.all
-  
+      
+
   
   end
   def pre_matricula_post
-        @nucleos = Nucleo.all
+                @nucleos = Nucleo.all
         @provas = Prova.all
   
     #dados do aluno
@@ -220,6 +221,7 @@ class SiteController < ApplicationController
     @dados_email.body="dados de nome dados de sobrenome "
     @dados_email.body_html= render 'dashboard/template_contato'
     @email.send_email @dados_email
+
   end
  
   def projetos_show
@@ -243,6 +245,22 @@ class SiteController < ApplicationController
        @professore=Professore.find(@id)
        @arquivos = @professore.arquivos.order(data_prioridade: :desc)
        @arquivo =@professore.arquivos.build
+       @maternal=false
+       @fase_1=false
+       @fase_2=false
+       @fase_3=false
+       @primeiro=false
+       @segundo=false
+       @terceiro=false
+       @quarto=false
+       @quinto=false
+       @sexto=false
+       @setimo=false
+       @oitavo=false
+       @nono=false
+       @primeiro_medio=false
+       @segundo_medio=false
+       @terceiro_medio=false
        
   end
   def testes

@@ -25,6 +25,10 @@
   <strong>Data prioridade:</strong>
   <%= @arquivo.data_prioridade %>
 </p>
+<p>
+  <strong>Publico</strong>
+  <%= @arquivo.turma %>
+</p>
 <hr>
   <%= link_to "Baixar", asset_path(@arquivo.arquivo.url),class:"btn btn-success" %>
 

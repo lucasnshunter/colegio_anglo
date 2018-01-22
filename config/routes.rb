@@ -62,6 +62,7 @@ Rails.application.routes.draw do
   get 'site/testes'
 
   get 'site/pre_matricula'
+  post 'site/pre_matricula'
   get 'site/pre_matricula_post'
   post 'site/pre_matricula_post'
   post 'site/projetos_show'

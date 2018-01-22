@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116192651) do
+ActiveRecord::Schema.define(version: 20180122164722) do
 
   create_table "acontecimentos", force: :cascade do |t|
     t.string   "titulo"
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20180116192651) do
     t.string   "arquivo_content_type"
     t.integer  "arquivo_file_size"
     t.datetime "arquivo_updated_at"
+    t.integer  "publico"
+    t.integer  "turma"
   end
 
   create_table "calendarios", force: :cascade do |t|

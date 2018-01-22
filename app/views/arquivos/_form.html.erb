@@ -38,6 +38,15 @@
     <%= f.label :arquivo %><br>
      <%= f.file_field :arquivo %>
   </div>  
+   <div class="field">
+    <%= f.label :turma %><br>
+    <%= f.select :turma, options_for_select([["maternal", 1], [ "Fase 1 maternal",2], 
+    [ "Fase 2 maternal",3], [ "Fase 3 maternal",4], [ "primeiro ano",5], [ "segundo ano",6],
+    [ "terceiro ano",7], [ "quarto ano",8], [ "quinto ano",9], [ "sexto ano",10], 
+    [ "setimo ano",11], [ "oitavo ano",12], [ "nono ano",13], [ "Primeiro ano medio",14], 
+    [ "segundo ano medio",15], [ "terceiro ano medio",16],]) %>
+    
+   </div>
  
   <%= f.hidden_field :professore_id %>
   <div class="actions">
