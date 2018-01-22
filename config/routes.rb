@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+  get 'dashboard/home'
+
   resources :arquivos
   resources :professores
   resources :nucleos
