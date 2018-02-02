@@ -235,7 +235,7 @@ class SiteController < ApplicationController
        @provas = Prova.all
        @id=params[:nucleo_id]
        @nucleo=Nucleo.find(@id)
-       @professores = @nucleo.professores.order(nome: :desc)
+       @professores = @nucleo.professores.order(nome: :asc)
        @professore = @nucleo.professores.build
   end
   def arquivos
