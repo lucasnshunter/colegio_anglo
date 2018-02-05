@@ -107,24 +107,17 @@
                               <div id="enemaccord" class="collapse">
                                  <br><br> 
                                  <ul style="margin:0px !important;padding:0px !important; width:100% !important">
+                                    <% @nucleos.each do |nucleo| %>
                                     <li>
-                                      <%= link_to "Provas", site_index_path %>
+                                        <%= link_to nucleo.titulo, site_professores_path(:nucleo_id => nucleo.id), :method => :post %>
+                                     
                                     </li>
-                                    <li>
-                                        <%= link_to "Linguagens", site_index_path %>
-                                    </li>
-                                    <li>
-                                        <%= link_to "Ciências Humanas", site_index_path %>
-                                    </li>
-                                    <li>
-                                        <%= link_to "Matématica", site_index_path %>
-                                    </li>
-                                    <li>
-                                      <%= link_to "Ciências da natureza", site_index_path %>
-                                    </li>
-                                    <li>
-                                        <%= link_to "Redação", site_index_path %>
-                                    </li>
+                                  
+                                    
+                                    
+     
+                                         
+                                     <% end %>
                                  </ul>
                                  <br><br> 
                               </div>
