@@ -4,11 +4,15 @@
    <div class="jumbo bg-black">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
          <div class="carousel-inner">
-            <div class="item active">
+             <div class="item">
+                
                     <a href=<%=@slider.link%>>
-                <%=image_tag @slider.photo.url%>
-                </a>
-             </div>
+                   <div class="item active">
+                       <%=(image_tag @slider.photo.url)%> 
+                       </div>
+                   </a>
+             
+                </div>
               <% @sliders.each do |slider| %>
                <%if slider.id!=@slider.id%>
                <div class="item">
