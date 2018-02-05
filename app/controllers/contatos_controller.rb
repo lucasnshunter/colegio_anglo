@@ -18,7 +18,7 @@ class ContatosController < ApplicationController
       @dados_email.destinatario="col.anglodecampinas@gmail.com"
       @dados_email.subject="Formulario de contato"
       @dados_email.body="Contato via formulario "
-      @dados_email.body_html= "<h1> nome do contato: </h1>: #{@contato.nome}<br> email: #{@contato.email}<br> <h1>conteudo da mensagem</h1> <br> #{@contato.text.html_safe} <br> segue link para download de arquivo : #{@contato.arquivo.url} "
+      @dados_email.body_html= "<h1> nome do contato</h1>: #{@contato.nome}<br> email: #{@contato.email}<br> <h1>conteudo da mensagem</h1> <br> #{@contato.text.html_safe} <br> segue link para download de arquivo : #{@contato.arquivo.url} "
       @email.send_email @dados_email
   end
 
