@@ -18,7 +18,7 @@
 
 <p>
   <strong>Texto:</strong>
-  <%= @estrutura.texto %>
+  <%= @estrutura.texto.html_safe %>
 </p>
 <hr>
 <%= image_tag @estrutura.photo.url %>

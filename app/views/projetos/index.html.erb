@@ -22,7 +22,7 @@
     <% @projetos.each do |projeto| %>
       <tr>
         <td><%= projeto.titulo %></td>
-        <td><%= projeto.texto %></td>
+        <td><%= projeto.texto.html_safe %></td>
         <td><%= projeto.link %></td>
         <td><%= link_to 'Mostrar ', projeto ,class:"btn btn-primary"%></td>
         <td><%= link_to 'Editar', edit_projeto_path(projeto) ,class:"btn btn-warning"%></td>

@@ -22,7 +22,7 @@
     <% @equipes.each do |equipe| %>
       <tr>
         <td><%= equipe.titulo %></td>
-        <td><%= equipe.texto %></td>
+        <td><%= equipe.texto.html_safe %></td>
         <td><%= link_to 'Mostrar', equipe ,class:"btn btn-primary"%></td>
         <td><%= link_to 'Editar', edit_equipe_path(equipe) ,class:"btn btn-warning"%></td>
         <td><%= link_to 'Apagar', equipe, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>

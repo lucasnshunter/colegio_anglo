@@ -13,7 +13,7 @@
 
 <p>
   <strong>Texto:</strong>
-  <%= @equipe.texto %>
+  <%= @equipe.texto.html_safe %>
 </p>
 <%= image_tag @equipe.photo.url %>
 

@@ -24,7 +24,7 @@
 <% @arquivos.each do |arquivo| %>
       <tr>
         <td><%= arquivo.titulo %></td>
-        <td><%= arquivo.descricao %></td>
+        <td><%= arquivo.descricao.html_safe %></td>
         <td><%= arquivo.data_criacao %></td>
         <td><%= arquivo.data_prioridade %></td>
         <td><%= arquivo.professore_id %></td>

@@ -13,7 +13,7 @@
 
 <p>
   <strong>Texto:</strong>
-  <%= @news.texto %>
+  <%= @news.texto.html_safe %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 </p>
 <p>
   <strong>abstract:</strong>
-  <%= @news.abstract %>
+  <%= @news.abstract.html_safe %>
 </p>
 <hr>
 <%= image_tag @news.photo.url %>

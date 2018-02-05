@@ -23,7 +23,7 @@
     <% @acontecimentos.each do |acontecimento| %>
       <tr>
         <td><%= acontecimento.titulo %></td>
-        <td><%= acontecimento.texto %></td>
+        <td><%= acontecimento.texto.html_safe %></td>
         <td><%= acontecimento.link %></td>
         <td><%= link_to 'Mostrar', acontecimento ,class:"btn btn-primary"%></td>
         <td><%= link_to 'Editar', edit_acontecimento_path(acontecimento),class:"btn btn-warning" %></td>

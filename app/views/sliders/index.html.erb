@@ -24,8 +24,8 @@
     <% @sliders.each do |slider| %>
       <tr>
         <td><%= slider.titulo %></td>
-        <td><%= slider.texto %></td>
-        <td><%= slider.descricao %></td>
+        <td><%= slider.texto.html_safe %></td>
+        <td><%= slider.descricao.html_safe %></td>
         <td><%= slider.link %></td>
         <td><%= slider.frase %></td>
         <td><%= link_to 'Mostrar', slider,class:"btn btn-primary" %></td>

@@ -22,7 +22,7 @@
     <% @news.each do |news| %>
       <tr>
         <td><%= news.titulo %></td>
-        <td><%= news.texto %></td>
+        <td><%= news.texto.html_safe %></td>
         <td><%= news.link %></td>
         <td><%= link_to 'Mostrar', news ,class:"btn btn-primary"%></td>
         <td><%= link_to 'Editar', edit_news_path(news) ,class:"btn btn-warning"%></td>

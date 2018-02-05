@@ -21,7 +21,7 @@
     <% @nucleos.each do |nucleo| %>
       <tr>
         <td><%= nucleo.titulo %></td>
-        <td><%= nucleo.descricao %></td>
+        <td><%= nucleo.descricao.html_safe %></td>
         <td><%= link_to 'Mostrar', nucleo ,class:"btn btn-success"%></td>
         <td><%= link_to 'Editar', edit_nucleo_path(nucleo), class:"btn btn-warning" %></td>
         <td><%= link_to 'Apagar', nucleo, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>

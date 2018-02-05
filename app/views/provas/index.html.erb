@@ -21,7 +21,7 @@
     <% @provas.each do |prova| %>
       <tr>
         <td><%= prova.titulo %></td>
-        <td><%= prova.texto %></td>
+        <td><%= prova.texto.html_safe %></td>
         <td><%= prova.link %></td>
         <td><%= link_to 'Mostrar', prova ,class:"btn btn-success"%></td>
         <td><%= link_to 'Editar', edit_prova_path(prova) ,class:"btn btn-warning"%></td>

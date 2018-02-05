@@ -18,7 +18,7 @@
       <tr>
         <td><%= professore.nome %></td>
         <td><%= professore.disciplina %></td>
-        <td><%= professore.descricao %></td>
+        <td><%= professore.descricao.html_safe %></td>
         <td><%= professore.nucleo_id %></td>
         <td><%= link_to 'Show', professore %></td>
         <td><%= link_to 'Edit', edit_professore_path(professore) %></td>
