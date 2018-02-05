@@ -1,56 +1,46 @@
-
 <div class="row" style="margin: 0px;">
-            <div class="col-sm-12 teambadge text-center">
-               <div class="badgearea text-center" id="galeria_labal">
-                  <p class="badgeparagraph">Galeria</p>
-               </div>
-            </div>
-         </div>
-         <div class="container-fluid main-canvas">
-            <div class="row big-description" style="margin-top:10px;">
-               <div class="col-sm-1"></div>
-               <div class="col-sm-10 text-center">
-                  <h2><%=@galery.titulo%></h2>
-               </div>
-            </div>
-         </div>
-         <div class="container-fluid main-canvas">
-             <div class="row">
- 
-         <div class="container">
-   <div class="row struclist">
-      <ul class="nav nav-pills nav-stacked">
-         <% @photos.each do |photo| %>
-         <a href="#lightbox" data-toggle="modal"  data-slide-to=<%=@cont_photos%>>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-top:49px;">
-               <div class="strucpic" >
-                  <li><%=image_tag photo.foto.url,class:"img-responsive"%></li>
-               </div>
-               <div class="struchover"id="estrutura_foto_base"></div>
-               <div class="stuctext"><%=photo.nome %></div>
-               <div class="strukeepr"></div>
-            </div>
-         </a>
-         <%@cont_photos+=1%>
-         <% end %>
-      </ul>
+   <div class="col-sm-12 teambadge text-center">
+      <div class="badgearea text-center" id="galeria_labal">
+         <p class="badgeparagraph">Galeria</p>
+      </div>
    </div>
 </div>
-  
- 
+<div class="container-fluid main-canvas">
+   <div class="row big-description" style="margin-top:10px;">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10 text-center">
+         <h2><%=@galery.titulo%></h2>
+      </div>
+   </div>
 </div>
-           
+<div class="container-fluid main-canvas">
+   <div class="row">
+      <div class="container">
+         <div class="row struclist">
+            <ul class="nav nav-pills nav-stacked">
+               <% @photos.each do |photo| %>
+               <a  class="biscoito"href="#lightbox" data-toggle="modal"  data-slide-to=<%=@cont_photos%> >
+                  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-top:49px;">
+                     <div class="strucpic" >
+                        <li><%=image_tag photo.foto.url,class:"img-responsive"%></li>
+                     </div>
+                     <div class="struchover"id="estrutura_foto_base"></div>
+                     <div class="stuctext"><%=photo.nome %>  teste</div>
+                     <div class="strukeepr"></div>
+                  </div>
+               </a>
+               <%@cont_photos+=1%>
+               <% end %>
+            </ul>
          </div>
-         <div class="row big-description">
-            <div class="col-sm-1"></div>
-            <%=link_to "<< VOLTAR",site_galeria_path,class:"btn btn-default"%>
-         </div>
-         
-         
-         
-         
-         <!--inicio das descrições-->
-   
+      </div>
+   </div>
+</div>
+<div class="row big-description">
+   <div class="col-sm-1"></div>
+   <%=link_to "<< VOLTAR",site_galeria_path,class:"btn btn-default"%>
+</div>
+<!--inicio das descrições-->
 <div class="modal fade and carousel slide" id="lightbox">
    <div class="modal-dialog">
       <div class="modal-content">
@@ -59,69 +49,54 @@
                <!-- controlador -->
                <li data-target="#lightbox" data-slide-to="0" class="active"></li>
                <% @photos.each do |photos| %>
-             
-               
                <li data-target="#lightbox" data-slide-to=<%=@cont_photos.to_s%></li>
-           <%@cont_photos+=1%>
-          
+               <%@cont_photos+=1%>
                <% end %>
             </ol>
-            
-            
-            
-            
-            
-            
-            
-            
-            
             <div class="carousel-inner">
                <div class="item active">
-              
-                <%=image_tag @foto.foto.url%>
+                  <%=image_tag @foto.foto.url%>
                </div>
                <% @photos.each do |photo| %>
-                   <%if @foto.id !=photo.id%>
-                     <div class="item ">
-                        
-                        <%=image_tag photo.foto.url%>
-                         
-                     </div>
-                   <%end%>
+               <%if @foto.id !=photo.id%>
+               <div class="item ">
+                  <%=image_tag photo.foto.url%>
+               </div>
+               <%end%>
                <% end %>
             </div>
             <!-- /.carousel-inner -->
             <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev"  style="background-color: transparent !important;">
-                <br>
-                  <br>
-                     <br>
-                        <br>
-                           <br> <br>
-                  <br>
-                     <br>
-                        <br>
-                           <br>
-                            <br>
-                     <br>
-                        <br>
-                           <br>
-           <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br> <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </a>
             <a class="right carousel-control" href="#lightbox" role="button" data-slide="next" style="background-color: transparent !important;">
-               <br>
-                  <br>
-                     <br>
-                        <br>
-                           <br> <br>
-                  <br>
-                     <br>
-                        <br>
-                           <br>
-                            <br>
-                     <br>
-                        <br>
-                           <br>
-           <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br> <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </a>
          </div>
          <!-- /.modal-body -->
@@ -131,14 +106,9 @@
    <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-
-
-
 <style>
    .modal.and.carousel {
    position: fixed; // Needed because the carousel overrides the position property
    }
 </style>
-
-
 <center><%= will_paginate @photos,:next_label => "Proximo",:previous_label =>"Anterior" %></center>
