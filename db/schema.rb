@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180122164722) do
+ActiveRecord::Schema.define(version: 20180205183722) do
 
   create_table "acontecimentos", force: :cascade do |t|
     t.string   "titulo"
@@ -71,6 +71,18 @@ ActiveRecord::Schema.define(version: 20180122164722) do
     t.string   "cargo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "contatos", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "email"
+    t.string   "text"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "arquivo_file_name"
+    t.string   "arquivo_content_type"
+    t.integer  "arquivo_file_size"
+    t.datetime "arquivo_updated_at"
   end
 
   create_table "egressos", force: :cascade do |t|

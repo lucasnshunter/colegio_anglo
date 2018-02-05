@@ -1,0 +1,25 @@
+<%= form_for @contato, :html => { multipart: true } do |f| %>
+  <% if @contato.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contato.errors.count, "error") %> prohibited this contato from being saved:</h2>
+
+      <ul>
+      <% @contato.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.text_field :nome,style:"width:46%;" %>
+  
+    <%= f.text_field :email,style:"width:50%;" %>
+ 
+    <%= f.text_area :text ,style:"width:100%;"%>
+ 
+  <%= f.file_field :arquivo %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

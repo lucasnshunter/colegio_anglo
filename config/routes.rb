@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  resources :contatos
   get 'dashboard/home'
 
   resources :arquivos

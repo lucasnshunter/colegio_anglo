@@ -1,0 +1,29 @@
+
+<hr>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8"><div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title"><center>Conteúdo da sua mensagem</center></h3>
+  </div>
+  <div class="panel-body">
+  <ul>
+    <li>
+      Nome :  <%= @contato.nome %>
+    </li>
+    <li>
+      Email:  <%= @contato.email %>
+    </li>
+    <li>
+      Conteudo da mensagem:  <%= @contato.text.html_safe %>
+    </li>
+    <li>
+      Arquivo: <%= link_to 'Baixar', asset_path(@contato.arquivo.url),class:"btn btn-warning" %> 
+    </li>
+  </ul>
+  </div>
+</div></div>
+  <div class="col-md-2"></div>
+</div>
+
+
