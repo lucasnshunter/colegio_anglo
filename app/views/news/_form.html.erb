@@ -53,33 +53,3 @@
 </div>
 
 
-
-
-<script src="../nicEdit.js" type="text/javascript"></script>
-<script>
-var area1, area2;
-
-function toggleArea1() {
-	if(!area1) {
-		area1 = new nicEditor({fullPanel : true}).panelInstance('myArea1',{hasPanel : true});
-	} else {
-		area1.removeInstance('myArea1');
-		area1 = null;
-	}
-}
-function toggleArea2() {
-	if(!area2) {
-		area2 = new nicEditor({fullPanel : true}).panelInstance('myArea2',{hasPanel : true});
-	} else {
-		area2.removeInstance('myArea2');
-		area2 = null;
-	}
-}
-
-
-
-
-
-bkLib.onDomLoaded(function() { toggleArea1(); });
-bkLib.onDomLoaded(function() { toggleArea2(); });
-</script>	
