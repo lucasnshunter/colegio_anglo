@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem "font-awesome-rails"
 gem 'therubyracer'
 gem 'aws-sdk', '~> 2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
