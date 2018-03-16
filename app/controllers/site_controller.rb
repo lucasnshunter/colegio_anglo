@@ -140,6 +140,7 @@ class SiteController < ApplicationController
       @photo = @galery.photos.build
       @foto=@galery.photos.first
        @cont_photos=0
+       @contador_pagina=1
   end
   def contato
       @nucleos = Nucleo.all

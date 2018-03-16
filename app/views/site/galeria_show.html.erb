@@ -113,12 +113,11 @@
 </style>
 <center>
    <% while @size>0 %>
-   <h1>lucas</h1>
-   <br>
+  <a href=<%="galeria_show?galeria_id="+@id+"&page="+@contador_pagina.to_s%>><%=@contador_pagina %></a> 
    <%@size-=6%>
+   <%@contador_pagina+=1%>
    <%end%>
 </center>
 <br>
-<center><a href=<%="galeria_show?galeria_id="+@id+"&page=2"%>>2</a></center>
 
-<h1><%=@size%></h1>
+
