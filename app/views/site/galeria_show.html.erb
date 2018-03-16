@@ -111,7 +111,13 @@
    position: fixed; // Needed because the carousel overrides the position property
    }
 </style>
-<center><%= will_paginate @photos,:next_label => "proximo",:previous_label =>"Anterior" %></center>
+<center>
+   <% while @size>0 %>
+   <h1>lucas</h1>
+   <br>
+   <%@size-=6%>
+   <%end%>
+</center>
 <br>
 <center><a href=<%="galeria_show?galeria_id="+@id+"&page=2"%>>2</a></center>
 
