@@ -114,7 +114,7 @@
 <center>
    <% while @size>0 %>
   <a href=<%="galeria_show?galeria_id="+@id+"&page="+@contador_pagina.to_s%>><%=@contador_pagina %></a> 
-   <%@size-=2%>
+   <%@size-=6%>
    <%@contador_pagina+=1%>
    <%end%>
 </center>
