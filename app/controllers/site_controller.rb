@@ -136,6 +136,7 @@ class SiteController < ApplicationController
       @id=params[:galeria_id]
       @galery=Galery.find(@id)
       @photos = @galery.photos.paginate(:page => params[:page])
+      @size= @galery.photos.size
       @photo = @galery.photos.build
       @foto=@galery.photos.first
        @cont_photos=0
