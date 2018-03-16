@@ -19,7 +19,7 @@
          <div class="row struclist">
             <ul class="nav nav-pills nav-stacked">
                <% @photos.each do |photo| %>
-           
+            <a  class"brasa"href="#lightbox" data-toggle="modal"  data-slide-to=<%=@cont_photos%> >
                   <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-top:49px;">
                      <div class="strucpic" >
                         <li><%=image_tag photo.foto.url,class:"img-responsive"%></li>
@@ -28,7 +28,7 @@
                      <div class="stuctext"><%=photo.nome %>  </div>
                      <div class="strukeepr"></div>
                   </div>
-               <a  class"brasa"href="#lightbox" data-toggle="modal"  data-slide-to=<%=@cont_photos%> >
+              
                   modal
                </a>
                <%@cont_photos+=1%>
