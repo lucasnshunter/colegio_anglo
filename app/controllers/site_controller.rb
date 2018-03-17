@@ -139,7 +139,7 @@ class SiteController < ApplicationController
       @size= @galery.photos.size
       @photo = @galery.photos.build
       @foto=@galery.photos.first
-       @cont_photos=0
+       @cont_photos=1
        @contador_pagina=1
   end
   def contato
