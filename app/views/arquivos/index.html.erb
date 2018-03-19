@@ -18,7 +18,8 @@
       <th>Descricao</th>
       <th>Data criacao</th>
       <th>Data prioridade</th>
-      <th>Professore</th>
+       <th>Turma</th>
+      <th>Professor</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,8 +31,10 @@
         <td><%= arquivo.descricao.html_safe %></td>
         <td><%= arquivo.data_criacao %></td>
         <td><%= arquivo.data_prioridade %></td>
-         <td><%= arquivo.turma %></td>
-        <td><%= arquivo.professore_id %></td>
+         <td><%= arquivo.define_turma arquivo.turma %></td>
+        <%@nome_prof=@professores.find(arquivo.professore_id.to_i )%>
+          
+        <td><%= @nome_prof.nome%></td>
         <td><%= link_to 'Mostrar', arquivo,class:"btn btn-primary" %></td>
         <td><%= link_to 'Editar', edit_arquivo_path(arquivo),class:"btn btn-warning" %></td>
         <td><%= link_to 'Apagar', arquivo, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>

@@ -6,6 +6,8 @@ class ArquivosController < ApplicationController
   # GET /arquivos
   # GET /arquivos.json
   def index
+    @professores=Professore.all
+    @nome_prof
     @arquivos = Arquivo.order(data_prioridade: :desc)
   end
 
