@@ -4,7 +4,7 @@
          <div class="carousel-inner">
             <div class="item active">
                 <a href=<%=@slider.link%>>
-                <%=image_tag @slider.photo.url%>
+                <%=image_tag @slider.photo.url,class:"img-responsive"%>
                 </a>
              </div>
               <% @sliders.each do |slider| %>
@@ -12,7 +12,7 @@
                <div class="item">
                 
                     <a href=<%=slider.link%>>
-                   <%=(image_tag slider.photo.url)%>
+                   <%=(image_tag slider.photo.url,class:"img-responsive")%>
                    </a>
              
                 </div>
